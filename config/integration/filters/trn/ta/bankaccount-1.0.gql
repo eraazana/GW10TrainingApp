@@ -1,0 +1,11 @@
+{
+    AccountNumber,
+    AccountType,
+    AgeOfMessage,
+    BankName,
+    ABContact {
+        Contact
+    },
+    RoutingNumber,
+    SenderRefID
+}

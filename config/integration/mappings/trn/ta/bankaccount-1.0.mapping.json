@@ -1,0 +1,42 @@
+{
+  "schemaName" : "trn.ta.bankaccount-1.0",
+  "mappers" : {
+    "BankAccountInfo": {
+      "schemaDefinition": "BankAccountInfo",
+      "root": "entity.BankAccount",
+      "properties": {
+        "AccountNumber": {
+          "path": "BankAccount.AccountNumber"
+        },
+        "AccountType": {
+          "path": "BankAccount.AccountType"
+        },
+        "AgeOfMessage": {
+          "path": "BankAccount.AgeOfMessage_Ext"
+        },
+        "BankName": {
+          "path": "BankAccount.BankName"
+        },
+        "ABContact": {
+          "path": "BankAccount.ABContact",
+          "mapper": "#/mappers/ContactInfo"
+        },
+        "RoutingNumber": {
+          "path": "BankAccount.RoutingNumber"
+        },
+        "SenderRefID": {
+          "path": "BankAccount.SenderRefID_Ext"
+        }
+      }
+    },
+    "ContactInfo": {
+      "schemaDefinition": "ContactInfo",
+      "root": "entity.ABContact",
+      "properties": {
+        "Contact": {
+          "path": "ABContact.PublicID"
+        }
+      }
+    }
+  }
+}

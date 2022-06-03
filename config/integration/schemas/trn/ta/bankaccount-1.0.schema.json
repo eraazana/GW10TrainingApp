@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "BankAccountInfo": {
+      "type": "object",
+      "properties": {
+        "AccountNumber": {
+          "type": "string"
+        },
+        "AccountType": {
+          "type": "string",
+          "x-gw-type": "typekey.BankAccountType"
+        },
+        "AgeOfMessage": {
+          "type": "string"
+        },
+        "BankName": {
+          "type": "string"
+        },
+        "ABContact": {
+          "$ref": "#/definitions/ContactInfo"
+        },
+        "RoutingNumber": {
+          "type": "string"
+        },
+        "SenderRefID": {
+          "type": "string"
+        }
+      }
+    },
+    "ContactInfo": {
+      "type": "object",
+      "properties": {
+        "Contact": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
